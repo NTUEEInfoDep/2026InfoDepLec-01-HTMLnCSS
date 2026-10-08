@@ -1,0 +1,86 @@
+:root { 
+  --todo-input-height: 3rem;
+  --todo-input-font-size: 2rem;
+}
+
+body {
+  background-color: green;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 15vh;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+#todo-input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+input#todo-input {
+  flex-grow: 1;
+}
+
+input#todo-input,
+button#todo-add {
+  height: var(--todo-input-height);
+  font-size: var(--todo-input-font-size);
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+}
+
+#todos {
+  height: 280px;
+  margin-top: 1.5rem;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  gap: 1rem;
+  overflow-y: scroll;
+}
+.todo-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.todo-item:hover {
+  background-color: #dff1f9;
+}
+.todo-item > div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.todo-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+.todo-item input[type="checkbox"] {
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+}
+.todo-item button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.todo-item button:hover {
+  font-size: 1.2rem;
+}

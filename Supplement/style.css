@@ -1,0 +1,226 @@
+/**/
+/*
+Parts in this block mark the important feature of each section
+Use DevTools (Press f12) in Chrome to have a detailed look of your website!
+*/
+/**/
+
+
+body{
+    background-color: white;
+}
+
+p{
+    text-align: center;
+}
+
+div.container{
+    margin-bottom: 30px;
+    background-color: lightgray;
+    padding: 10px;
+}
+
+div.border{
+    /*
+    A container can have borders
+    You can change the values!
+    */
+    /**/
+    border-style: dotted solid;
+    /* none / solid / dashed / dotted / double / groove / ridge / inset / outset / hidden  */
+    
+    border-width: 6px;
+    border-color: blue;
+    border-radius: 10px;
+    /**/
+
+    width: 80%;
+}
+
+div.margin_padding{
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    width: 80%;
+    justify-self: center;
+    padding: 40px; /* Try to remove this -> observe "margin collapsing"*/
+}
+
+div.margin_padding #margin{
+    /**/
+    margin: 40px;
+    /**/
+
+    background-color: aquamarine;
+}
+
+div.margin_padding #padding{
+    /**/
+    padding: 40px;
+    /**/
+
+    background-color: aquamarine;
+}
+
+div.justify_content{
+    /*Align items in flexible containers on the main axis (horizontally).*/
+    /**/
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-start / flex-end / center / space-between / space-around / space-evenly / stretch */
+    /**/
+
+    width: 80%;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    justify-self: center;
+}
+
+div.justify_content div{
+    width: 10%;
+    height: 100px;
+}
+
+div.justify_items{
+    /*Align items in grid containers on the main axis (horizontally).*/
+    /**/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* fr: "fractional unit", not "for real" */
+    justify-items: center;
+    /* auto / start / end / center / stretch / baseline */
+    /**/
+
+    width: 80%;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    justify-self: center; /* Still works in *display: block* parent element */
+}
+
+div.justify_items div{
+    width: 50%;
+    height: 100px;
+    margin: 5px;
+}
+
+div.justify_self{
+    /**/
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* fr: "fractional unit", not "for real" */
+    justify-items: center;
+    /**/
+
+    width: 80%;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    margin-inline: auto;  /* Center itself in the parent element */
+}
+
+div.justify_self div{
+    width: 50%;
+    height: 100px;
+    margin: 5px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+div.justify_self div#div1 {
+    /*Align the child element in grid containers on the main axis (horizontally).*/
+    /*Overrides *justify_items* of parent element*/
+    /**/
+    justify-self: start;
+    /**/
+}
+
+div.justify_self div#div2 {
+    /*Align the child element in grid containers on the main axis (horizontally).*/
+    /*Overrides *justify_items* of parent element*/
+    /**/
+    justify-self: end;
+    /**/
+}
+  
+
+div.align_content{
+    /*Pack items in flexible containers on the cross axis (vertically).*/
+    /**/
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    /* flex-start / flex-end / center / space-between / space-around / space-evenly / stretch */
+    /**/
+
+    width: 80%;
+    height: 200px;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    justify-self: center;
+}
+
+div.align_content div{
+    width: 80%;  /* Adjust the value to 20% to see that the *flex-direction* has default value *row* */
+    height: 50px;
+}
+
+
+div.align_items{
+    /*Pack items in flexible/grid containers on the cross axis (vertically).*/
+    /**/
+    display: flex;
+    align-items: center;
+    /* auto / start / end / center / stretch / baseline */
+    /**/
+
+    width: 80%;
+    height: 200px;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    justify-self: center;
+}
+
+div.align_items div{
+    width: 20%;  
+    height: 80px;
+}
+
+div.align_self{
+    display: flex;
+    align-items: start;
+
+    width: 80%;
+    height: 200px;
+    padding: 40px;
+    border-style: solid;
+    border-color: black;
+    justify-self: center;
+}
+
+div.align_self div{
+    width: 10%; 
+    height: 40px;
+}
+
+div.align_self #div1{
+    /*Adjust itself in flexible containers on the cross axis (vertically).*/
+    /*Overrides *align_items* of parent element*/
+
+    /**/
+    align-self: center;
+    /* auto / start / end / center / stretch / baseline */
+    /**/
+}
+
+div.align_self #div2{
+    /*Adjust itself in flexible containers on the cross axis (vertically).*/
+    /*Overrides *align_items* of parent element*/
+
+    /**/
+    align-self: end;
+    /* auto / start / end / center / stretch / baseline */
+    /**/
+}
+
